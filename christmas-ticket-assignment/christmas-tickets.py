@@ -86,13 +86,14 @@ def make_json_tickets(ticket_information):
         file.write(json_tickets) # Add the dictionary
         file.close()
 
-    exit()
-
 # Show which person got who
 def show_tickets(ticket_information):
     # Show every person their respective ticket
-    for person in ticket_information:
-        print(f"persoon genaamd '{person}' heeft het lot van de persoon genaamd '{ticket_information[person]}' getrokken ")
+    for person_call in ticket_information:
+        name = ticket_information[person_call]['person']
+        random_person = ticket_information[person_call]['random_person']
+
+        print(f"persoon genaamd '{name}' heeft het lot van de persoon genaamd '{random_person}' getrokken ")
 
 
 # Call all the functions
