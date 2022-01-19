@@ -79,12 +79,12 @@ def make_json_tickets(ticket_information):
 
     # Route information
     time_str = f"{day}-{month}-{year}_{hour}-{minute}-{second}"
-    file_name = f"christmas-ticket-assignment/data/{time_str}.txt"
+    file_name = f"christmas-ticket-assignment/data/{time_str}.json"
     
     # Make a new file in the data folder
     with open(file_name, "w") as file:
         file.write(json_tickets) # Add the dictionary
-
+        file.close()
 
     exit()
 
